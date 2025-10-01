@@ -6,17 +6,25 @@ import { App } from './app';
 import { Contador } from './contador/contador';
 import { Boton } from './components/boton/boton';
 import { FormsModule } from '@angular/forms';
+import { Directivas } from './directivas/directivas';
+import { Resaltar } from './custom-directives/resaltar';
+import { NbaPlayers } from './nba-players/nba-players';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     App,
     Contador,
-    Boton
+    Boton,
+    Directivas,
+    Resaltar,
+    NbaPlayers
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
